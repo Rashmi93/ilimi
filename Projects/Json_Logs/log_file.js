@@ -1,7 +1,7 @@
 var _ = require('underscore');
 var readLine = require('readline');
 var rl = readLine.createInterface({
-  input: require('fs').createReadStream('test_data.log')
+  input: require('fs').createReadStream('Test_Data.log')
 });
 var events = [];
 

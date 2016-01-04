@@ -16,7 +16,7 @@ rl.on('close', function() {
 
 	var oeEvents = _.where(events, {eid: 'OE_INTERACT'});
 
-    // get counts by uid & did using map
+        // get counts by uid & did using map
 		uidMap = {};
 		didMap = {};
 		_.each(oeEvents, function(event){

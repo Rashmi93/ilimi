@@ -16,22 +16,21 @@ rl.on('line', function(line) {
 
 rl.on('close', function() {
 // Filter for OE_INTERACT
-    var oeEvents = _.where(events, {eid: 'OE_INTERACT'});
-
-    // get counts by uid & did using map 
-		uidMap = {};
-		didMap = {};
-		_.each(oeEvents, function(event){
-			if(uidMap[event.uid])
-			    { uidMap[event.uid]++; }
-			else
-			{ uidMap[event.uid]=1; }
-		    if(didMap[event.did])
-			    { didMap[event.did]++;}
-		    else
-		    { didMap[event.did]=1; }
-		   
-		});
+	var oeEvents = _.where(events, {eid: 'OE_INTERACT'});
+// get counts by uid & did using map 
+	uidMap = {};
+	didMap = {};
+	_.each(oeEvents, function(event){
+		if(uidMap[event.uid])
+		{ uidMap[event.uid]++; }
+		else
+		{ uidMap[event.uid]=1; }
+		
+		if(didMap[event.did])
+		{ didMap[event.did]++;}
+		else
+		{ didMap[event.did]=1; }
+	});
 	// converting uidmap to string
 		var uid_tostring=JSON.stringify(uidMap,null,'\n');
 		var uid_output = uid_tostring.replace(/\n/g, "\r\n");
@@ -39,7 +38,7 @@ rl.on('close', function() {
 		var did_tostring=JSON.stringify(didMap,null,'\n');
 		var did_output = did_tostring.replace(/\n/g, "\r\n");
 	//writing to output to file
-	    file.write(uid_output);
-	    file.write(did_output);
-	    file.end();
+	    	file.write(uid_output);
+	    	file.write(did_output);
+	    	file.end();
 });

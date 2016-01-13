@@ -1,4 +1,4 @@
-var parseGitLog = require('./ex')
+var parseGitLog = require('./index')
 var p = parseGitLog({cwd: 'C:/Users/rashmi n/ilimi/'})
 
 p.then(function (json) {

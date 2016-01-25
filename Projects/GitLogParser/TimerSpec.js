@@ -6,7 +6,7 @@ describe("checking for gitlog retrival", function() {
         var parseGitLog = require('./GitLogManager');
         var _ = require('underscore');
         var p = parseGitLog({
-                cwd: './'
+                cwd: '../..'
             })
             //filtering one commit id details
         p.then(function(json) {

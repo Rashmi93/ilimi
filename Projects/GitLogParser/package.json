@@ -5,6 +5,14 @@
   "dependencies": {
     "exec-cmd": "2.0.1",
     "underscore": "1.8.3",
-    "handle-callback":"2.0.0"
-  }
+    "handle-callback": "2.0.0"
+  },
+  "main": "GitLogParser.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

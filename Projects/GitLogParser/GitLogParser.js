@@ -1,7 +1,7 @@
 //code to parse the output of gitlog to json
 var parseGitLog = require('./GitLogManager');
 var p = parseGitLog({
-    cwd: '/home/rashmi/ilimi'
+    cwd: './'
 })
 p.then(function(json) {
 

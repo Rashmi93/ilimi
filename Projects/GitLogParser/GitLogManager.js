@@ -35,10 +35,12 @@ function resolve(options) {
     var cwd = options.cwd ? path.resolve(options.cwd) : process.cwd()
     return path.resolve(cwd, options.path || '.git')
 }
+
 //executing Gitlog command
 function gitLog() {
     return runCommand('git log --stat')
 }
+
 //restoring the current working directory
 function restoreCwd(json) {
     process.chdir(cwd)
